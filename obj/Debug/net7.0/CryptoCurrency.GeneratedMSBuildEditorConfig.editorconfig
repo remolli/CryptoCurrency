@@ -16,6 +16,10 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\Win10\Desktop\GITHUB\CryptoCurrency
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/Win10/Desktop/GITHUB/CryptoCurrency/Views/Home/ExchangeRate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxFeGNoYW5nZVJhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Win10/Desktop/GITHUB/CryptoCurrency/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
