@@ -7,6 +7,7 @@ namespace CryptoCurrency.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
+        API _api = new API();
 
         public HomeController(ILogger<HomeController> logger)
         {
@@ -16,6 +17,16 @@ namespace CryptoCurrency.Controllers
         public IActionResult Index()
         {
             return View();
+        }
+
+        public async Task<IActionResult> ExchangeRate(string asset_id_base)
+        {
+            if (asset_id_base == null)
+            {
+                asset_id_base = "BTC";
+            }
+            var responseDeserialized = await _api.GetExchangeRateAsync(asset_id_base);
+            return View(responseDeserialized);
         }
 
         public IActionResult Privacy()
