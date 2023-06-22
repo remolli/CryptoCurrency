@@ -1,0 +1,29 @@
+﻿@model GetExchangeRateModel
+
+@{
+    ViewData["Title"] = "Exchange - " + Model;
+}
+
+<div class="text-center">
+    <h3 class="display-6">@Model.asset_id_base</h3>
+</div>
+<div class="container row">
+    @foreach (var rate in Model.rates)
+    {
+        string quote = rate.asset_id_quote;
+        if (
+            // CRYPTO
+            quote == "BTC" || quote == "ETH" || quote == "BNB" || quote == "USDT" || quote == "USDC" ||
+
+            // COIN
+            quote == "EUR" || quote == "USD" || quote == "JPY" || quote == "GBP" || quote == "BRL"
+           )
+        {
+            <div class="col p-3 m-2 border">
+                <p class="row">Quote: @rate.asset_id_quote</p>
+                <p class="row">Rate: @rate.rate</p>
+                <p class="row">Time: @rate.time</p>
+            </div>
+        }
+    }
+</div>
