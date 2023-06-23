@@ -29,6 +29,22 @@ namespace CryptoCurrency.Controllers
             return View(responseDeserialized);
         }
 
+        public async Task<IActionResult> Assets()
+        {
+            var responseDeserialized = await _api.GetAssetsAsync();
+            return View(responseDeserialized);
+        }
+
+        public async Task<IActionResult> Asset(string asset_id)
+        {
+            if (asset_id == null)
+            {
+                asset_id = "BTC";
+            }
+            var responseDeserialized = await _api.GetAssetAsync(asset_id);
+            return View(responseDeserialized);
+        }
+
         public IActionResult Privacy()
         {
             return View();
