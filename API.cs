@@ -29,7 +29,8 @@ namespace CryptoCurrency
         {
             var request = new RestRequest($"/v1/assets/{asset_id}");
             request.AddHeader("X-CoinAPI-Key", "11CA632B-F6B4-419E-8E88-65246C594C97");
-            var requestDeserialized = await client.GetAsync<GetAssetModel>(request);
+            var requestArrayDeserialized = await client.GetAsync<GetAssetModel[]>(request);
+            var requestDeserialized = requestArrayDeserialized.FirstOrDefault();
             return requestDeserialized;
         }
     }
