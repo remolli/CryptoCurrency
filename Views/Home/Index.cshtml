@@ -9,56 +9,62 @@
     </div>
  
     <div class="text-center">
-        <form asp-controller="Home" asp-action="ExchangeRate" class="row text-center bg-dark">
-            <div class="col border px-5 py-4">
+        <p class="fs-5"><i>View all assets here</i></p>
+        <a asp-controller="Home" asp-action="Asset" class="btn btn-outline-light px-3 py-2">Assets</a>
+    </div>
+
+    <div class="text-center">
+        <form class="row text-center bg-black">
+            <div class="radio-list col border-start px-5 py-4">
                 <h3 class="display-4 border-bottom border-white p-4">Crypto</h3>
-                <div class="border border-dark py-2 bg-black text-white m-2" style="border-radius:15px">
+                <div class="radio-item" style="border-radius:15px">
                     <input type="radio" id="BTC" name="asset_id_base" value="BTC" class="" />
                     <label for="BTC" class="fs-5">Bitcoin</label>
                 </div>
-                <div class="border border-dark py-2 bg-black text-white m-2" style="border-radius:15px">
+                <div class="radio-item" style="border-radius:15px">
                     <input type="radio" id="ETH" name="asset_id_base" value="ETH" class="" />
                     <label for="ETH" class="fs-5">Ethereum</label>
                 </div>
-                <div class="border border-dark py-2 bg-black text-white m-2" style="border-radius:15px">
+                <div class="radio-item" style="border-radius:15px">
                     <input type="radio" id="BNB" name="asset_id_base" value="BNB" class="" />
                     <label for="BNB" class="fs-5">BNB</label>
                 </div>
-                <div class="border border-dark py-2 bg-black text-white m-2" style="border-radius:15px">
+                <div class="radio-item" style="border-radius:15px">
                     <input type="radio" id="USDT" name="asset_id_base" value="USDT" class="" />
                     <label for="USDT" class="fs-5">Tether</label>
                 </div>
-                <div class="border border-dark py-2 bg-black text-white m-2" style="border-radius:15px">
+                <div class="radio-item" style="border-radius:15px">
                     <input type="radio" id="USDC" name="asset_id_base" value="USDC" class="" />
                     <label for="USDC" class="fs-5">USD Coin</label>
                 </div>
             </div>
 
-            <div class="col border px-5 py-4">
+            <div class="radio-list col border-end px-5 py-4">
                 <h3 class="display-4 border-bottom border-white p-4">Coin</h3>
-                <div class="border border-dark py-2 bg-black text-white m-2" style="border-radius:15px">
+                <div class="radio-item" style="border-radius:15px">
                     <input type="radio" id="EUR" name="asset_id_base" value="EUR" class="" />
                     <label for="EUR" class="fs-5">Euro</label>
                 </div>
-                <div class="border border-dark py-2 bg-black text-white m-2" style="border-radius:15px">
+                <div class="radio-item" style="border-radius:15px">
                     <input type="radio" id="USD" name="asset_id_base" value="USD" class="" />
                     <label for="USD" class="fs-5">Dollar</label>
                 </div>
-                <div class="border border-dark py-2 bg-black text-white m-2" style="border-radius:15px">
+                <div class="radio-item" style="border-radius:15px">
                     <input type="radio" id="JPY" name="asset_id_base" value="JPY" class="" />
                     <label for="JPY" class="fs-5">Japanese Yen</label>
                 </div>
-                <div class="border border-dark py-2 bg-black text-white m-2" style="border-radius:15px">
+                <div class="radio-item" style="border-radius:15px">
                     <input type="radio" id="GBP" name="asset_id_base" value="GBP" class="" />
                     <label for="GBP" class="fs-5">Pound Sterling</label>
                 </div>
-                <div class="border border-dark py-2 bg-black text-white m-2" style="border-radius:15px">
+                <div class="radio-item" style="border-radius:15px">
                     <input type="radio" id="BRL" name="asset_id_base" value="BRL" class="" />
                     <label for="BRL" class="fs-5">Brazilian Real</label>
                 </div>
             </div>
             <div class="row">
-                <input type="submit" class="btn btn-success m-2 p-3 fs-4" value="Confirm" />
+                <input type="submit" class="col btn btn-outline-success m-2 p-3 fs-4" asp-controller="Home" asp-action="ExchangeRate" value="Exchange Rate" />
+                <input type="submit" class="col btn btn-outline-success m-2 p-3 fs-4" asp-controller="Home" asp-action="Asset" value="Asset" />
             </div>
         </form>
     </div>
