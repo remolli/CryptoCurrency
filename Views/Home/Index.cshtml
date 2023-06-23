@@ -2,67 +2,64 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+<body class="bg-black text-white">
+    <div class="text-center m-5">
+        <h1 class="display-1 my-3">CrytoCurrency</h1>
+        <p class="fs-5"><i>A simple tool for exchange rates.</i></p>
+    </div>
  
-<div class="text-center row">
-    <form asp-controller="Home" asp-action="ExchangeRate" class="">
-        <div class="col">
-            <div class="">
-                <input type="radio" id="BTC" name="asset_id_base" value="BTC" class="" />
-                <label for="BTC">Bitcoin</label>
-            </div>
-            <div class="">
-                <input type="radio" id="ETH" name="asset_id_base" value="ETH" class="" />
-                <label for="ETH">Ethereum</label>
-            </div>
-            <div class="">
-                <input type="radio" id="BNB" name="asset_id_base" value="BNB" class="" />
-                <label for="BNB">BNB</label>
-            </div>
-            <div class="">
-                <input type="radio" id="USDT" name="asset_id_base" value="USDT" class="" />
-                <label for="USDT">Tether</label>
-            </div>
-            <div class="">
-                <input type="radio" id="USDC" name="asset_id_base" value="USDC" class="" />
-                <label for="USDC">USD Coin</label>
-            </div>
-
-@*            Crypto:
-            BTC (bitcoin)   ETH (etherum)   BNB (BNB)
-            USDT (tether)   USDC (USD Coin)
-*@
-        </div>
-        <div class="col">
-            <div class="">
-                <input type="radio" id="EUR" name="asset_id_base" value="EUR" class="" />
-                <label for="EUR">Euro</label>
-            </div>
-            <div class="">
-                <input type="radio" id="USD" name="asset_id_base" value="USD" class="" />
-                <label for="USD">Dollar</label>
-            </div>
-            <div class="">
-                <input type="radio" id="JPY" name="asset_id_base" value="JPY" class="" />
-                <label for="JPY">Japanese Yen</label
-            </div>
-            <div class="">
-                <input type="radio" id="GBP" name="asset_id_base" value="GBP" class="" />
-                <label for="GBP">Pound Sterling</label
-            </div>
-            <div class="">
-                <input type="radio" id="BRL" name="asset_id_base" value="BRL" class="" />
-                <label for="BRL">Brazilian Real</label>
+    <div class="text-center">
+        <form asp-controller="Home" asp-action="ExchangeRate" class="row text-center bg-dark">
+            <div class="col border px-5 py-4">
+                <h3 class="display-4 border-bottom border-white p-4">Crypto</h3>
+                <div class="border border-dark py-2 bg-black text-white m-2" style="border-radius:15px">
+                    <input type="radio" id="BTC" name="asset_id_base" value="BTC" class="" />
+                    <label for="BTC" class="fs-5">Bitcoin</label>
+                </div>
+                <div class="border border-dark py-2 bg-black text-white m-2" style="border-radius:15px">
+                    <input type="radio" id="ETH" name="asset_id_base" value="ETH" class="" />
+                    <label for="ETH" class="fs-5">Ethereum</label>
+                </div>
+                <div class="border border-dark py-2 bg-black text-white m-2" style="border-radius:15px">
+                    <input type="radio" id="BNB" name="asset_id_base" value="BNB" class="" />
+                    <label for="BNB" class="fs-5">BNB</label>
+                </div>
+                <div class="border border-dark py-2 bg-black text-white m-2" style="border-radius:15px">
+                    <input type="radio" id="USDT" name="asset_id_base" value="USDT" class="" />
+                    <label for="USDT" class="fs-5">Tether</label>
+                </div>
+                <div class="border border-dark py-2 bg-black text-white m-2" style="border-radius:15px">
+                    <input type="radio" id="USDC" name="asset_id_base" value="USDC" class="" />
+                    <label for="USDC" class="fs-5">USD Coin</label>
+                </div>
             </div>
 
-@*            Coin:
-            EUR (euro)   USD (dolar)   JPY (japanese yen)
-            GBP (pound sterling)   BRL (brazilian real)
-*@
-        </div>
-            <input type="submit" class="btn btn-success m-2 p-2" value="Confirm" />
-    </form>
-</div>
+            <div class="col border px-5 py-4">
+                <h3 class="display-4 border-bottom border-white p-4">Coin</h3>
+                <div class="border border-dark py-2 bg-black text-white m-2" style="border-radius:15px">
+                    <input type="radio" id="EUR" name="asset_id_base" value="EUR" class="" />
+                    <label for="EUR" class="fs-5">Euro</label>
+                </div>
+                <div class="border border-dark py-2 bg-black text-white m-2" style="border-radius:15px">
+                    <input type="radio" id="USD" name="asset_id_base" value="USD" class="" />
+                    <label for="USD" class="fs-5">Dollar</label>
+                </div>
+                <div class="border border-dark py-2 bg-black text-white m-2" style="border-radius:15px">
+                    <input type="radio" id="JPY" name="asset_id_base" value="JPY" class="" />
+                    <label for="JPY" class="fs-5">Japanese Yen</label>
+                </div>
+                <div class="border border-dark py-2 bg-black text-white m-2" style="border-radius:15px">
+                    <input type="radio" id="GBP" name="asset_id_base" value="GBP" class="" />
+                    <label for="GBP" class="fs-5">Pound Sterling</label>
+                </div>
+                <div class="border border-dark py-2 bg-black text-white m-2" style="border-radius:15px">
+                    <input type="radio" id="BRL" name="asset_id_base" value="BRL" class="" />
+                    <label for="BRL" class="fs-5">Brazilian Real</label>
+                </div>
+            </div>
+            <div class="row">
+                <input type="submit" class="btn btn-success m-2 p-3 fs-4" value="Confirm" />
+            </div>
+        </form>
+    </div>
+</body>
