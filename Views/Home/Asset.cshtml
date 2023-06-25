@@ -3,3 +3,20 @@
 @{
     ViewData["Title"] = "Asset - " + Model.name;
 }
+<div class="col">
+    <p class="row">@Model.asset_id - @Model.name</p>
+    <p class="row">@Model.type_is_crypto</p>
+    <p class="row">@Model.price_usd</p>
+    <p class="row">@Model.data_quote_start</p>
+    <p class="row">@Model.data_quote_end</p>
+    <p class="row">@Model.data_start</p>
+    <p class="row">@Model.data_end</p>
+    <p class="row">@Model.data_orderbook_start</p>
+    <p class="row">@Model.data_orderbook_end</p>
+    <p class="row">@Model.data_symbols_count</p>
+    <p class="row">@Model.data_trade_start</p>
+    <p class="row">@Model.data_trade_end</p>
+    <p class="row">@Model.volume_1hrs_usd</p>
+    <p class="row">@Model.volume_1day_usd</p>
+    <p class="row">@Model.volume_1mth_usd</p>
+</div>
