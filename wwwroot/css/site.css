@@ -30,14 +30,12 @@ body {
 }
 .radio-item label {
     display: block;
-    padding: 20px 60px;
+    padding: 10px 30px;
     background:rgb(28, 28, 28);
-    border: 2px solid white;
-    border-radius: 8px;
+    border: 1px solid white;
+    border-radius: 15px;
     cursor: pointer;
     font-size:18px;
-    font-weight:400px;
-    min-width:250px;
     white-space: nowrap;
     position: relative;
     transition: 0.25s;
@@ -77,4 +75,17 @@ body {
 }
 .radio-item label:hover{
     background:rgb(50, 50, 50);
+}
+.confirm-btn{
+    min-width: 200px;
+}
+
+.exchange-form {
+    display: unset;
+    max-width: 400px;
+}
+
+@media (max-width: 767px)
+{
+    .exchange-form { display: none; }
 }
