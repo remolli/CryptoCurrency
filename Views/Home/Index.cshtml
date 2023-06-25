@@ -10,13 +10,13 @@
  
     <div class="text-center">
         <p class="fs-5"><i>View all assets here</i></p>
-        <a asp-controller="Home" asp-action="Asset" class="btn btn-outline-light px-3 py-2">Assets</a>
+        <a asp-controller="Home" asp-action="Assets" class="btn btn-outline-light px-3 py-2">Assets</a>
     </div>
 
-    <div class="text-center">
-        <form class="row text-center bg-black">
-            <div class="radio-list col border-start px-5 py-4">
-                <h3 class="display-4 border-bottom border-white p-4">Crypto</h3>
+    <div class="exchange-form text-center">
+        <form class="row row-cols-2 bg-black border">
+            <div class="radio-list col border-start">
+                <h3 class="display-6 border-bottom border-white py-3"><img src="/bitcoin.png" class="img-fluid" style="max-width:25px" /> Crypto</h3>
                 <div class="radio-item" style="border-radius:15px">
                     <input type="radio" id="BTC" name="asset_id_base" value="BTC" class="" />
                     <label for="BTC" class="fs-5">Bitcoin</label>
@@ -39,8 +39,8 @@
                 </div>
             </div>
 
-            <div class="radio-list col border-end px-5 py-4">
-                <h3 class="display-4 border-bottom border-white p-4">Coin</h3>
+            <div class="radio-list col border-end">
+                <h3 class="display-6 border-bottom border-white py-3">Money <img src="/dinheiro.png" class="img-fluid" style="max-width:25px" /></h3>
                 <div class="radio-item" style="border-radius:15px">
                     <input type="radio" id="EUR" name="asset_id_base" value="EUR" class="" />
                     <label for="EUR" class="fs-5">Euro</label>
@@ -62,10 +62,12 @@
                     <label for="BRL" class="fs-5">Brazilian Real</label>
                 </div>
             </div>
-            <div class="row">
-                <input type="submit" class="col btn btn-outline-success m-2 p-3 fs-4" asp-controller="Home" asp-action="ExchangeRate" value="Exchange Rate" />
-                <input type="submit" class="col btn btn-outline-success m-2 p-3 fs-4" asp-controller="Home" asp-action="Asset" value="Asset" />
-            </div>
+                <div class="col">
+                    <input type="submit" class="confirm-btn btn btn-outline-success my-3 px-5 py-2 fs-5" asp-controller="Home" asp-action="ExchangeRate" value="Exchange Rate" />
+                </div>
+                <div class="col">                                                
+                    <input type="submit" class="confirm-btn btn btn-outline-success my-3 px-5 py-2 fs-5" asp-controller="Home" asp-action="Asset" value="Asset" />
+                </div>
         </form>
     </div>
 </body>
