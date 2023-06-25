@@ -5,8 +5,16 @@
       "PackagePath": "staticwebassets\\CryptoCurrency.bundle.scp.css"
     },
     {
+      "Id": "C:\\Users\\Win10\\Desktop\\GITHUB\\CryptoCurrency\\wwwroot\\bitcoin.png",
+      "PackagePath": "staticwebassets\\bitcoin.png"
+    },
+    {
       "Id": "C:\\Users\\Win10\\Desktop\\GITHUB\\CryptoCurrency\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "C:\\Users\\Win10\\Desktop\\GITHUB\\CryptoCurrency\\wwwroot\\dinheiro.png",
+      "PackagePath": "staticwebassets\\dinheiro.png"
     },
     {
       "Id": "C:\\Users\\Win10\\Desktop\\GITHUB\\CryptoCurrency\\wwwroot\\favicon.ico",

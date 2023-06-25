@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "YHv7YtA3vY/PsUPo50j+YhICHcRy6eyVVyVCdnTjctw=",
+  "Hash": "+61N/rta/lLc2m2uYggdd+jRJ3VfU+YJltp6DZWt1M8=",
   "Source": "CryptoCurrency",
   "BasePath": "_content/CryptoCurrency",
   "Mode": "Default",
@@ -51,6 +51,23 @@
       "OriginalItemSpec": "C:\\Users\\Win10\\Desktop\\GITHUB\\CryptoCurrency\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\CryptoCurrency.bundle.scp.css"
     },
     {
+      "Identity": "C:\\Users\\Win10\\Desktop\\GITHUB\\CryptoCurrency\\wwwroot\\bitcoin.png",
+      "SourceId": "CryptoCurrency",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Win10\\Desktop\\GITHUB\\CryptoCurrency\\wwwroot\\",
+      "BasePath": "_content/CryptoCurrency",
+      "RelativePath": "bitcoin.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\bitcoin.png"
+    },
+    {
       "Identity": "C:\\Users\\Win10\\Desktop\\GITHUB\\CryptoCurrency\\wwwroot\\css\\site.css",
       "SourceId": "CryptoCurrency",
       "SourceType": "Discovered",
@@ -66,6 +83,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\site.css"
+    },
+    {
+      "Identity": "C:\\Users\\Win10\\Desktop\\GITHUB\\CryptoCurrency\\wwwroot\\dinheiro.png",
+      "SourceId": "CryptoCurrency",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Win10\\Desktop\\GITHUB\\CryptoCurrency\\wwwroot\\",
+      "BasePath": "_content/CryptoCurrency",
+      "RelativePath": "dinheiro.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\dinheiro.png"
     },
     {
       "Identity": "C:\\Users\\Win10\\Desktop\\GITHUB\\CryptoCurrency\\wwwroot\\favicon.ico",
