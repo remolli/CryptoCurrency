@@ -25,6 +25,13 @@ namespace CryptoCurrency
             var requestDeserialized = await client.GetAsync<GetAssetModel[]>(request);
             return requestDeserialized;
         }
+        public async Task<GetAssetModel[]> GetAssetsFilterAsync(string filter)
+        {
+            var request = new RestRequest($"/v1/assets?filter_asset_id={filter}");
+            request.AddHeader("X-CoinAPI-Key", "11CA632B-F6B4-419E-8E88-65246C594C97");
+            var requestDeserialized = await client.GetAsync<GetAssetModel[]>(request);
+            return requestDeserialized;
+        }
         public async Task<GetAssetModel> GetAssetAsync(string asset_id)
         {
             var request = new RestRequest($"/v1/assets/{asset_id}");
