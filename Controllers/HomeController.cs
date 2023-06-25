@@ -29,10 +29,19 @@ namespace CryptoCurrency.Controllers
             return View(responseDeserialized);
         }
 
-        public async Task<IActionResult> Assets()
+        public async Task<IActionResult> Assets(string filter)
         {
-            var responseDeserialized = await _api.GetAssetsAsync();
-            return View(responseDeserialized);
+            if (filter == null)
+            {
+                var responseDeserialized = await _api.GetAssetsAsync();
+                return View(responseDeserialized);
+            }
+            else
+            {
+                var responseDeserialized = await _api.GetAssetsFilterAsync(filter);
+                return View(responseDeserialized);
+            }
+
         }
 
         public async Task<IActionResult> Asset(string asset_id_base)
