@@ -9,49 +9,49 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = CryptoCurrency
 build_property.RootNamespace = CryptoCurrency
-build_property.ProjectDir = C:\Users\Win10\Desktop\GITHUB\CryptoCurrency\
+build_property.ProjectDir = C:\Users\lia\Desktop\GITHUB\CryptoCurrency\
 build_property.RazorLangVersion = 7.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\Win10\Desktop\GITHUB\CryptoCurrency
+build_property.MSBuildProjectDirectory = C:\Users\lia\Desktop\GITHUB\CryptoCurrency
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/Win10/Desktop/GITHUB/CryptoCurrency/Views/Home/Asset.cshtml]
+[C:/Users/lia/Desktop/GITHUB/CryptoCurrency/Views/Home/Asset.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxBc3NldC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Win10/Desktop/GITHUB/CryptoCurrency/Views/Home/Assets.cshtml]
+[C:/Users/lia/Desktop/GITHUB/CryptoCurrency/Views/Home/Assets.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxBc3NldHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Win10/Desktop/GITHUB/CryptoCurrency/Views/Home/ExchangeRate.cshtml]
+[C:/Users/lia/Desktop/GITHUB/CryptoCurrency/Views/Home/ExchangeRate.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxFeGNoYW5nZVJhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Win10/Desktop/GITHUB/CryptoCurrency/Views/Home/Index.cshtml]
+[C:/Users/lia/Desktop/GITHUB/CryptoCurrency/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Win10/Desktop/GITHUB/CryptoCurrency/Views/Home/Privacy.cshtml]
+[C:/Users/lia/Desktop/GITHUB/CryptoCurrency/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Win10/Desktop/GITHUB/CryptoCurrency/Views/Shared/Error.cshtml]
+[C:/Users/lia/Desktop/GITHUB/CryptoCurrency/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Win10/Desktop/GITHUB/CryptoCurrency/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/lia/Desktop/GITHUB/CryptoCurrency/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Win10/Desktop/GITHUB/CryptoCurrency/Views/_ViewImports.cshtml]
+[C:/Users/lia/Desktop/GITHUB/CryptoCurrency/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Win10/Desktop/GITHUB/CryptoCurrency/Views/_ViewStart.cshtml]
+[C:/Users/lia/Desktop/GITHUB/CryptoCurrency/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Win10/Desktop/GITHUB/CryptoCurrency/Views/Shared/_Layout.cshtml]
+[C:/Users/lia/Desktop/GITHUB/CryptoCurrency/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-g9698udfsk
