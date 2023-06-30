@@ -19,44 +19,38 @@ namespace CryptoCurrency.Controllers
             return View();
         }
 
-        public async Task<IActionResult> ExchangeRate(string asset_id_base)
+        public async Task<IActionResult> Ticker(string symbol)
         {
-            if (asset_id_base == null)
+            if (symbol == null)
             {
-                asset_id_base = "BTC";
+                symbol = "BTC";
             }
-            var responseDeserialized = await _api.GetExchangeRateAsync(asset_id_base);
+            var responseDeserialized = await _api.GetTickerAsync(symbol);
             return View(responseDeserialized);
         }
 
-        public async Task<IActionResult> Assets(string filter)
+        public async Task<IActionResult> Tickers()
         {
-            if (filter == null)
-            {
-                var responseDeserialized = await _api.GetAssetsAsync();
-                return View(responseDeserialized);
-            }
-            else
-            {
-                var responseDeserialized = await _api.GetAssetsFilterAsync(filter);
-                return View(responseDeserialized);
-            }
-
-        }
-
-        public async Task<IActionResult> Asset(string asset_id_base)
-        {
-            if (asset_id_base == null)
-            {
-                asset_id_base = "BTC";
-            }
-            var responseDeserialized = await _api.GetAssetAsync(asset_id_base);
+            var responseDeserialized = await _api.GetTickersAsync();
             return View(responseDeserialized);
         }
 
-        public IActionResult Privacy()
+        // ---------------------------------------
+
+        public async Task<IActionResult> Symbol(string symbol)
         {
-            return View();
+            if (symbol == null)
+            {
+                symbol = "BTC";
+            }
+            var responseDeserialized = await _api.GetSymbolAsync(symbol);
+            return View(responseDeserialized);
+        }
+
+        public async Task<IActionResult> Symbols()
+        {
+            var responseDeserialized = await _api.GetSymbolsAsync();
+            return View(responseDeserialized);
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
