@@ -1,4 +1,5 @@
 ﻿using CryptoCurrency.Models;
+using CryptoCurrency_Console.Models;
 using RestSharp;
 
 namespace CryptoCurrency
@@ -8,36 +9,35 @@ namespace CryptoCurrency
         RestClient client;
         public API()
         {
-            var options = new RestClientOptions("https://rest.coinapi.io");
+            var options = new RestClientOptions("https://api.blockchain.com/v3/exchange");
             client = new RestClient(options);
         }
-        public async Task<GetExchangeRateModel> GetExchangeRateAsync(string asset_id_base)
+        public async Task<GetTickerModel[]> GetTickersAsync()
         {
-            var request = new RestRequest($"/v1/exchangerate/{asset_id_base}");
-            request.AddHeader("X-CoinAPI-Key", "11CA632B-F6B4-419E-8E88-65246C594C97");
-            var requestDeserialized = await client.GetAsync<GetExchangeRateModel>(request);
+            var request = new RestRequest($"/tickers");
+            request.AddHeader("X-API-Token", "7905f5e7-94c4-44f4-a229-d496e9c3d7a1");
+            var requestDeserialized = await client.GetAsync<GetTickerModel[]>(request);
             return requestDeserialized;
         }
-        public async Task<GetAssetModel[]> GetAssetsAsync()
+        public async Task<GetTickerModel> GetTickerAsync(string symbol)
         {
-            var request = new RestRequest($"/v1/assets");
-            request.AddHeader("X-CoinAPI-Key", "11CA632B-F6B4-419E-8E88-65246C594C97");
-            var requestDeserialized = await client.GetAsync<GetAssetModel[]>(request);
+            var request = new RestRequest($"/tickers/{symbol}");
+            request.AddHeader("X-API-Token", "7905f5e7-94c4-44f4-a229-d496e9c3d7a1");
+            var requestDeserialized = await client.GetAsync<GetTickerModel>(request);
             return requestDeserialized;
         }
-        public async Task<GetAssetModel[]> GetAssetsFilterAsync(string filter)
+        public async Task<Dictionary<string, GetSymbolModel>> GetSymbolsAsync()
         {
-            var request = new RestRequest($"/v1/assets?filter_asset_id={filter}");
-            request.AddHeader("X-CoinAPI-Key", "11CA632B-F6B4-419E-8E88-65246C594C97");
-            var requestDeserialized = await client.GetAsync<GetAssetModel[]>(request);
+            var request = new RestRequest($"/symbols");
+            request.AddHeader("X-API-Token", "7905f5e7-94c4-44f4-a229-d496e9c3d7a1");
+            var requestDeserialized = await client.GetAsync<Dictionary<string, GetSymbolModel>>(request);
             return requestDeserialized;
         }
-        public async Task<GetAssetModel> GetAssetAsync(string asset_id)
+        public async Task<GetSymbolModel> GetSymbolAsync(string symbol)
         {
-            var request = new RestRequest($"/v1/assets/{asset_id}");
-            request.AddHeader("X-CoinAPI-Key", "11CA632B-F6B4-419E-8E88-65246C594C97");
-            var requestArrayDeserialized = await client.GetAsync<GetAssetModel[]>(request);
-            var requestDeserialized = requestArrayDeserialized.FirstOrDefault();
+            var request = new RestRequest($"/symbols/{symbol}");
+            request.AddHeader("X-API-Token", "7905f5e7-94c4-44f4-a229-d496e9c3d7a1");
+            var requestDeserialized = await client.GetAsync<GetSymbolModel>(request);
             return requestDeserialized;
         }
     }
