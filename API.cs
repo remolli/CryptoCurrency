@@ -1,5 +1,4 @@
 ﻿using CryptoCurrency.Models;
-using CryptoCurrency_Console.Models;
 using RestSharp;
 
 namespace CryptoCurrency

@@ -1,9 +1,4 @@
-﻿using System.Globalization;
-using System.Text.Json.Serialization;
-using Newtonsoft.Json;
-using Newtonsoft.Json.Converters;
-
-namespace CryptoCurrency_Console.Models
+﻿namespace CryptoCurrency.Models
 {
     public class GetSymbolsModel
     {
