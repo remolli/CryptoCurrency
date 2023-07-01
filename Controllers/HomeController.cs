@@ -14,9 +14,10 @@ namespace CryptoCurrency.Controllers
             _logger = logger;
         }
 
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
-            return View();
+            var responseDeserialized = await _api.GetTickersAsync();
+            return View(responseDeserialized);
         }
 
         public async Task<IActionResult> Ticker(string symbol)
