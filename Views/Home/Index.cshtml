@@ -1,73 +1,54 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
+﻿@model GetTickerModel[]
+
+@{
+    ViewData["Title"] = "CryptoCurrency";
 }
 
 <body class="bg-black text-white">
     <div class="text-center m-5">
         <h1 class="display-1 my-3">CrytoCurrency</h1>
-        <p class="fs-5"><i>A simple tool for exchange rates.</i></p>
+        <p class="fs-5"><i>Just assets exhibition.</i></p>
     </div>
  
-    <div class="text-center">
-        <p class="fs-5"><i>View all assets here</i></p>
-        <a asp-controller="Home" asp-action="Assets" class="btn btn-outline-light px-3 py-2">Assets</a>
+    <div class="text-center py-4 border-end border-start">
+        <p class="fs-5"><i>View all symbols here</i></p>
+        <a asp-controller="Home" asp-action="Symbols" class="btn btn-outline-light px-3 py-2">Symbols</a>
     </div>
 
-    <div class="exchange-form text-center">
-        <form class="row row-cols-2 bg-black border">
-            <div class="radio-list col border-start">
-                <h3 class="display-6 border-bottom border-white py-3"><img src="/bitcoin.png" class="img-fluid" style="max-width:25px" /> Crypto</h3>
-                <div class="radio-item" style="border-radius:15px">
-                    <input type="radio" id="BTC" name="asset_id_base" value="BTC" class="" />
-                    <label for="BTC" class="fs-5">Bitcoin</label>
-                </div>
-                <div class="radio-item" style="border-radius:15px">
-                    <input type="radio" id="ETH" name="asset_id_base" value="ETH" class="" />
-                    <label for="ETH" class="fs-5">Ethereum</label>
-                </div>
-                <div class="radio-item" style="border-radius:15px">
-                    <input type="radio" id="BNB" name="asset_id_base" value="BNB" class="" />
-                    <label for="BNB" class="fs-5">BNB</label>
-                </div>
-                <div class="radio-item" style="border-radius:15px">
-                    <input type="radio" id="USDT" name="asset_id_base" value="USDT" class="" />
-                    <label for="USDT" class="fs-5">Tether</label>
-                </div>
-                <div class="radio-item" style="border-radius:15px">
-                    <input type="radio" id="USDC" name="asset_id_base" value="USDC" class="" />
-                    <label for="USDC" class="fs-5">USD Coin</label>
-                </div>
-            </div>
+    <div class="container text-center text-white my-5">
+        <h2 class="display-6 border-bottom my-2 py-2">Assets</h2>
+        <div class="row">
+            <p class="col fs-4 border-end border-start">Symbol</p>
+        
+            <p class="col fs-4 border-end border-start">Price (24h)</p>
+        
+            <p class="col fs-4 border-end border-start">Volume (24h)</p>
+            
+            <p class="col fs-4 border-end border-start desktop">Last trade price</p>
+        </div>
+        @foreach (var item in Model)
+        {
+            string quote = item.symbol;
+            if (
+            // CRYPTO
+            quote == "BTC-USD" || quote == "ETH-USD" || quote == "BNB-USD" || quote == "USDT-USD" || quote == "USDC-USD" || quote == "XRP-USD" || quote == "ADA-USD" || quote == "FGC-USD" || quote == "DOGE-USD" || quote == "LTC-USD" ||
 
-            <div class="radio-list col border-end">
-                <h3 class="display-6 border-bottom border-white py-3">Money <img src="/dinheiro.png" class="img-fluid" style="max-width:25px" /></h3>
-                <div class="radio-item" style="border-radius:15px">
-                    <input type="radio" id="EUR" name="asset_id_base" value="EUR" class="" />
-                    <label for="EUR" class="fs-5">Euro</label>
+            // COIN
+            quote == "EUR-USD" || quote == "JPY-USD" || quote == "GBP-USD" || quote == "BRL-USD"
+            )
+            {
+                <div class="row border-bottom border-white py-1 my-2 d-flex justify-content-center align-items-center">
+                    <a class="col fs-5 link-primary" asp-controller="Home" asp-action="Symbol" asp-route-symbol="@item.symbol">@item.symbol</a>
+                    <p class="col fs-5 money fst-italic">$@Math.Round(item.price_24h, 2)</p>
+                    <p class="col fs-5 money fst-italic">$@Math.Round(item.volume_24h, 2)</p>
+                    <p class="col fs-5 money fst-italic desktop">$@Math.Round(item.last_trade_price, 2)</p>
                 </div>
-                <div class="radio-item" style="border-radius:15px">
-                    <input type="radio" id="USD" name="asset_id_base" value="USD" class="" />
-                    <label for="USD" class="fs-5">Dollar</label>
-                </div>
-                <div class="radio-item" style="border-radius:15px">
-                    <input type="radio" id="JPY" name="asset_id_base" value="JPY" class="" />
-                    <label for="JPY" class="fs-5">Japanese Yen</label>
-                </div>
-                <div class="radio-item" style="border-radius:15px">
-                    <input type="radio" id="GBP" name="asset_id_base" value="GBP" class="" />
-                    <label for="GBP" class="fs-5">Pound Sterling</label>
-                </div>
-                <div class="radio-item" style="border-radius:15px">
-                    <input type="radio" id="BRL" name="asset_id_base" value="BRL" class="" />
-                    <label for="BRL" class="fs-5">Brazilian Real</label>
-                </div>
-            </div>
-                <div class="col">
-                    <input type="submit" class="confirm-btn btn btn-outline-success my-3 px-5 py-2 fs-5" asp-controller="Home" asp-action="ExchangeRate" value="Exchange Rate" />
-                </div>
-                <div class="col">                                                
-                    <input type="submit" class="confirm-btn btn btn-outline-success my-3 px-5 py-2 fs-5" asp-controller="Home" asp-action="Asset" value="Asset" />
-                </div>
-        </form>
+            }
+        }
     </div>
 </body>
+<style>
+    .money{
+        color:limegreen;
+    }
+</style>
