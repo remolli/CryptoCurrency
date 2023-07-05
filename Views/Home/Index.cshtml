@@ -1,4 +1,4 @@
-﻿@model GetTickerModel[]
+﻿@model GetAssetsModel
 
 @{
     ViewData["Title"] = "CryptoCurrency";
@@ -22,33 +22,50 @@
         
             <p class="col fs-4 border-end border-start">Price (24h)</p>
         
-            <p class="col fs-4 border-end border-start">Volume (24h)</p>
+            <p class="col fs-4 border-end border-start desktop">Volume USD (24h)</p>
             
-            <p class="col fs-4 border-end border-start desktop">Last trade price</p>
+            <p class="col fs-4 border-end border-start ">Change (24hr)</p>
         </div>
-        @foreach (var item in Model)
+        @foreach (var item in Model.data)
         {
             string quote = item.symbol;
             if (
             // CRYPTO
-            quote == "BTC-USD" || quote == "ETH-USD" || quote == "BNB-USD" || quote == "USDT-USD" || quote == "USDC-USD" || quote == "XRP-USD" || quote == "ADA-USD" || quote == "FGC-USD" || quote == "DOGE-USD" || quote == "LTC-USD" ||
+            quote == "BTC" || quote == "ETH" || quote == "BNB" || quote == "USDT" || quote == "USDC" || quote == "XRP" || quote == "ADA" || quote == "FGC" || quote == "DOGE" || quote == "LTC" ||
 
             // COIN
-            quote == "EUR-USD" || quote == "JPY-USD" || quote == "GBP-USD" || quote == "BRL-USD"
+            quote == "EUR" || quote == "JPY" || quote == "GBP" || quote == "BRL"
             )
             {
-                <div class="row border-bottom border-white py-1 my-2 d-flex justify-content-center align-items-center">
-                    <a class="col fs-5 link-primary" asp-controller="Home" asp-action="Symbol" asp-route-symbol="@item.symbol">@item.symbol</a>
-                    <p class="col fs-5 money fst-italic">$@Math.Round(item.price_24h, 2)</p>
-                    <p class="col fs-5 money fst-italic">$@Math.Round(item.volume_24h, 2)</p>
-                    <p class="col fs-5 money fst-italic desktop">$@Math.Round(item.last_trade_price, 2)</p>
+                <div class="row border-bottom border-white py-1 my-2 d-flex justify-content-center align-items-center bg-dark bg-opacity-25" style="border-radius:5px">
+                    <a class="col fs-5 btn btn-outline-primary px-0" asp-controller="Home" asp-action="Symbol" asp-route-symbol="@item.symbol" style="border-top:0px;border-right:0px;border-left:0px">@item.name</a>
+                    <p class="col fs-5 money fst-italic">$@Math.Round(item.priceUsd, 5)</p>
+                    <p class="col fs-5 money fst-italic desktop">$@Math.Round(item.volumeUsd24Hr, 5)</p>
+                    @if (item.changePercent24Hr < 0)
+                    {
+                        <p class="col fs-5 text-danger fst-italic">$@Math.Round(item.changePercent24Hr, 5)</p>
+
+                    }
+                    else if (item.changePercent24Hr > 0)
+                    {
+                        <p class="col fs-5 profit fst-italic">$@Math.Round(item.changePercent24Hr, 5)</p>
+                        
+                    }
+                    else
+                    {
+                        <p class="col fs-5 text-white fst-italic">$@Math.Round(item.changePercent24Hr, 5)</p>
+
+                    }
                 </div>
             }
         }
     </div>
 </body>
 <style>
+    .profit{
+        color: rgb(20, 200, 20);
+    }
     .money{
-        color:limegreen;
+        color: rgb(20, 170, 20);
     }
 </style>
