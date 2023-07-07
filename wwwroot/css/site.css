@@ -101,3 +101,32 @@ body {
         display: none;
     }
 }
+.profit {
+    color: rgb(20, 200, 20);
+}
+
+.money {
+    color: rgb(20, 170, 20);
+}
+.cryptocurrency {
+    border-right: 1px solid white;
+    border-left: 1px solid white;
+    border-top: 1px solid black;
+    border-bottom:1px solid black;
+    letter-spacing: 5px;
+    padding: 1px;
+    background: linear-gradient(to right, rgba(255,255,255,0.03), #000, #000, #000, #000, rgba(255,255,255,0.03));
+    transition: 0.25s;
+}
+    .cryptocurrency:hover {
+        letter-spacing: 8px;
+        background: linear-gradient(to right, rgba(255,255,255,0.05), #000, #000, #000, #000, rgba(255,255,255,0.05));
+    }
+
+.margin-hover{
+    margin: 5px 0px;
+    transition: 0.25s;
+}
+    .margin-hover:hover {
+        margin:10px 0px;
+    }
