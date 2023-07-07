@@ -5,6 +5,11 @@
         public AssetModel[]? data { get; set; }
         public decimal timestamp { get; set; }
     }
+    public class GetAssetModel
+    {
+        public AssetModel? data { get; set; }
+        public decimal timestamp { get; set; }
+    }
     public class AssetModel
     {
         public string id { get; set; }
