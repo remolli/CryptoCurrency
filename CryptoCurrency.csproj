@@ -12,11 +12,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Content Remove="Views\Home\Symbol.cshtml" />
-    <Content Remove="Views\Home\Symbols.cshtml" />
-  </ItemGroup>
-
-  <ItemGroup>
     <PackageReference Include="RestSharp" Version="110.2.0" />
   </ItemGroup>
 

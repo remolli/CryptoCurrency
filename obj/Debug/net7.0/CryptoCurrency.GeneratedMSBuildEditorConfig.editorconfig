@@ -16,8 +16,20 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\lia\Desktop\GITHUB\CryptoCurrency
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/lia/Desktop/GITHUB/CryptoCurrency/Views/Home/About.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxBYm91dC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/lia/Desktop/GITHUB/CryptoCurrency/Views/Home/Contact.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDb250YWN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/lia/Desktop/GITHUB/CryptoCurrency/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/lia/Desktop/GITHUB/CryptoCurrency/Views/Home/Symbol.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxTeW1ib2wuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/lia/Desktop/GITHUB/CryptoCurrency/Views/Shared/Error.cshtml]
