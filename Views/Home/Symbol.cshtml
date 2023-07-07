@@ -1,0 +1,135 @@
+﻿@model GetAssetModel
+
+@{
+    ViewData["Title"] = Model.data.name;
+}
+
+<div class="desktop container text-center row">
+    <div class="col bg-dark bg-opacity-25 border">
+        
+        <div class="py-3 my-2">
+            <p class="display-4 m-1">@Model.data.symbol - @Model.data.name</p>
+            <p class="fs-4 fst-italic m-0" style="letter-spacing:3px">Rank @Model.data.rank</p>
+        </div>
+        
+        <div class="my-2 py-2 border-bottom border-top border-secondary">
+            <p class="m-0" style="letter-spacing:2px">Supply</p>
+            <p class="fs-5 money fst-italic">$@Model.data.supply</p>
+        </div>
+
+        @if (Model.data.maxSupply != null)
+        {
+            <div class="my-2 py-2 border-bottom border-secondary">
+                <p class="m-0" style="letter-spacing:2px">Max Supply</p>
+                <p class="fs-5 money fst-italic">$@Model.data.maxSupply</p>
+            </div>
+        }
+
+        <div class="my-2 py-2 border-bottom border-secondary">
+            <p class="m-0" style="letter-spacing:2px">Market Cap USD</p>
+            <p class="fs-5 money fst-italic">$@Model.data.marketCapUsd</p>
+        </div>
+        
+        <div class="my-2 py-2 border-bottom border-secondary">
+            <p class="m-0" style="letter-spacing:2px">Volume in USD (24Hr)</p>
+            <p class="fs-5 money fst-italic">$@Model.data.volumeUsd24Hr</p>
+        </div>
+        
+        <div class="my-2 py-2 border-bottom border-secondary">
+            <p class="m-0" style="letter-spacing:2px">Price USD</p>
+            <p class="fs-5 money fst-italic">$@Model.data.priceUsd</p>
+        </div>
+        
+        <div class="my-2 py-2 border-secondary">
+            <p class="m-0" style="letter-spacing:2px">Change % (24hr)</p>
+            @if (Model.data.changePercent24Hr < 0) 
+            {
+                <p class="col fs-5 text-danger fst-italic">$@Model.data.changePercent24Hr</p>
+            }
+            else if (Model.data.changePercent24Hr > 0)
+            {
+                <p class="col fs-5 profit fst-italic">$@Model.data.changePercent24Hr</p>
+            }
+            else 
+            {
+                <p class="col fs-5 text-white fst-italic">$@Model.data.changePercent24Hr</p>
+            }
+        </div>
+        
+        @if (Model.data.vwap24Hr != null)
+        {
+            <div class="my-2 py-2 border-top border-secondary">
+                <p class="" style="letter-spacing:2px;margin-top:8px;margin-bottom:0px">Volume Weighted Average Price (24hr)</p>
+                <p class="fs-5 money fst-italic">$@Model.data.vwap24Hr</p>
+            </div>
+        }
+        
+        <a class="btn btn-outline-info fs-5 px-5 py-3" style="margin-bottom:20px" href="@Model.data.explorer">More Details</a>
+        
+    </div>
+</div>
+
+<div class="mobile text-center row">
+    <div class="col bg-dark bg-opacity-25">
+
+        <div class="py-3 my-2">
+            <p class="display-4 m-1">@Model.data.symbol - @Model.data.name</p>
+            <p class="fs-4 fst-italic m-0" style="letter-spacing:3px">Rank @Model.data.rank</p>
+        </div>
+
+        <div class="my-2 py-2 border-bottom border-top border-secondary">
+            <p class="m-0" style="letter-spacing:2px">Supply</p>
+            <p class="fs-5 money fst-italic">$@Model.data.supply</p>
+        </div>
+
+        @if (Model.data.maxSupply != null)
+        {
+            <div class="my-2 py-2 border-bottom border-secondary">
+                <p class="m-0" style="letter-spacing:2px">Max Supply</p>
+                <p class="fs-5 money fst-italic">$@Model.data.maxSupply</p>
+            </div>
+        }
+
+        <div class="my-2 py-2 border-bottom border-secondary">
+            <p class="m-0" style="letter-spacing:2px">Market Cap USD</p>
+            <p class="fs-5 money fst-italic">$@Model.data.marketCapUsd</p>
+        </div>
+
+        <div class="my-2 py-2 border-bottom border-secondary">
+            <p class="m-0" style="letter-spacing:2px">Volume in USD (24Hr)</p>
+            <p class="fs-5 money fst-italic">$@Model.data.volumeUsd24Hr</p>
+        </div>
+
+        <div class="my-2 py-2 border-bottom border-secondary">
+            <p class="m-0" style="letter-spacing:2px">Price USD</p>
+            <p class="fs-5 money fst-italic">$@Model.data.priceUsd</p>
+        </div>
+
+        <div class="my-2 py-2 border-secondary">
+            <p class="m-0" style="letter-spacing:2px">Change % (24hr)</p>
+            @if (Model.data.changePercent24Hr < 0)
+            {
+                <p class="col fs-5 text-danger fst-italic">$@Model.data.changePercent24Hr</p>
+            }
+            else if (Model.data.changePercent24Hr > 0)
+            {
+                <p class="col fs-5 profit fst-italic">$@Model.data.changePercent24Hr</p>
+            }
+            else
+            {
+                <p class="col fs-5 text-white fst-italic">$@Model.data.changePercent24Hr</p>
+            }
+        </div>
+
+        @if (Model.data.vwap24Hr != null)
+        {
+            <div class="my-2 py-2 border-top border-secondary">
+                <p class="" style="letter-spacing:2px;margin-top:8px;margin-bottom:0px">Volume Weighted Average Price (24hr)</p>
+                <p class="fs-5 money fst-italic">$@Model.data.vwap24Hr</p>
+            </div>
+        }
+
+        <a class="btn btn-outline-info fs-5 px-5 py-3" style="margin-bottom:20px" href="@Model.data.explorer">More Details</a>
+
+    </div>
+</div>
