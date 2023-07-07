@@ -20,7 +20,19 @@ namespace CryptoCurrency.Controllers
             return View(responseDeserialized);
         }
 
-        // ---------------------------------------
+        public async Task<IActionResult> Symbol(string id)
+        {
+            var requestDeserialized = await _api.GetAssetAsync(id);
+            return View(requestDeserialized);
+        }
+        public IActionResult About()
+        {
+            return View();
+        }
+        public IActionResult Contact()
+        {
+            return View();
+        }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
