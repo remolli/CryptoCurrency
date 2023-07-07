@@ -18,5 +18,12 @@ namespace CryptoCurrency
             var requestDeserialized = await client.GetAsync<GetAssetsModel>(request);
             return requestDeserialized;
         }
+        public async Task<GetAssetModel> GetAssetAsync(string id)
+        {
+            var request = new RestRequest($"/assets/{id}");
+            request.AddHeader("Authorization", "Bearer7b46f726-cc15-4d61-92c1-778ee01669d0");
+            var requestDeserialized = await client.GetAsync<GetAssetModel>(request);
+            return requestDeserialized;
+        }
     }
 }
