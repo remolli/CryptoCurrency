@@ -1,71 +1,51 @@
 ﻿@model GetAssetsModel
 
 @{
-    ViewData["Title"] = "CryptoCurrency";
+    ViewData["Title"] = "Home";
 }
 
 <body class="bg-black text-white">
-    <div class="text-center m-5">
-        <h1 class="display-1 my-3">CrytoCurrency</h1>
+    <div class="text-center m-5 cryptocurrency">
+        <h1 class="display-2 my-3">CrytoCurrency</h1>
         <p class="fs-5"><i>Just assets exhibition.</i></p>
-    </div>
- 
-    <div class="text-center py-4 border-end border-start">
-        <p class="fs-5"><i>View all symbols here</i></p>
-        <a asp-controller="Home" asp-action="Symbols" class="btn btn-outline-light px-3 py-2">Symbols</a>
     </div>
 
     <div class="container text-center text-white my-5">
-        <h2 class="display-6 border-bottom my-2 py-2">Assets</h2>
-        <div class="row">
-            <p class="col fs-4 border-end border-start">Symbol</p>
+        <div class="row d-flex align-items-center">
+            <p class="col fs-5 border-end border-start" style="letter-spacing:2px">Asset</p>
         
-            <p class="col fs-4 border-end border-start">Price (24h)</p>
+            <p class="col fs-5 border-end border-start" style="letter-spacing:2px">Price (24h)</p>
         
-            <p class="col fs-4 border-end border-start desktop">Volume USD (24h)</p>
+            <p class="col fs-5 border-end border-start desktop" style="letter-spacing:2px">Volume USD (24h)</p>
             
-            <p class="col fs-4 border-end border-start ">Change (24hr)</p>
+            <p class="col fs-5 border-end border-start" style="letter-spacing:2px">Change (24hr)</p>
         </div>
-        @foreach (var item in Model.data)
-        {
-            string quote = item.symbol;
-            if (
-            // CRYPTO
-            quote == "BTC" || quote == "ETH" || quote == "BNB" || quote == "USDT" || quote == "USDC" || quote == "XRP" || quote == "ADA" || quote == "FGC" || quote == "DOGE" || quote == "LTC" ||
 
-            // COIN
-            quote == "EUR" || quote == "JPY" || quote == "GBP" || quote == "BRL"
-            )
+        @{
+            foreach (var item in Model.data)
             {
-                <div class="row border-bottom border-white py-1 my-2 d-flex justify-content-center align-items-center bg-dark bg-opacity-25" style="border-radius:5px">
-                    <a class="col fs-5 btn btn-outline-primary px-0" asp-controller="Home" asp-action="Symbol" asp-route-symbol="@item.symbol" style="border-top:0px;border-right:0px;border-left:0px">@item.name</a>
-                    <p class="col fs-5 money fst-italic">$@Math.Round(item.priceUsd, 5)</p>
-                    <p class="col fs-5 money fst-italic desktop">$@Math.Round(item.volumeUsd24Hr, 5)</p>
-                    @if (item.changePercent24Hr < 0)
-                    {
-                        <p class="col fs-5 text-danger fst-italic">$@Math.Round(item.changePercent24Hr, 5)</p>
+                if (item.rank <= 15)
+                {
+                    <div class="row margin-hover border-bottom border-white py-2 d-flex justify-content-center align-items-center bg-dark bg-opacity-25" style="border-radius:5px">
+                        <a class="col fs-5 btn btn-outline-primary bg-primary bg-opacity-10 px-0" asp-controller="Home" asp-action="Symbol" asp-route-id="@item.id" style="border-top:0px;border-right:0px;border-left:0px">@item.name</a>
+                        <p class="col fs-5 money fst-italic">$@Math.Round(item.priceUsd, 5)</p>
+                        <p class="col fs-5 money fst-italic desktop">$@Math.Round(item.volumeUsd24Hr, 5)</p>
+                        @if (item.changePercent24Hr < 0)
+                        {
+                            <p class="col fs-5 text-danger fst-italic">$@Math.Round(item.changePercent24Hr, 5)</p>
 
-                    }
-                    else if (item.changePercent24Hr > 0)
-                    {
-                        <p class="col fs-5 profit fst-italic">$@Math.Round(item.changePercent24Hr, 5)</p>
-                        
-                    }
-                    else
-                    {
-                        <p class="col fs-5 text-white fst-italic">$@Math.Round(item.changePercent24Hr, 5)</p>
-
-                    }
-                </div>
+                        }
+                        else if (item.changePercent24Hr > 0)
+                        {
+                            <p class="col fs-5 profit fst-italic">$@Math.Round(item.changePercent24Hr, 5)</p>
+                        }
+                        else
+                        {
+                            <p class="col fs-5 text-white fst-italic">$@Math.Round(item.changePercent24Hr, 5)</p>
+                        }
+                    </div>
+                }
             }
         }
     </div>
 </body>
-<style>
-    .profit{
-        color: rgb(20, 200, 20);
-    }
-    .money{
-        color: rgb(20, 170, 20);
-    }
-</style>
