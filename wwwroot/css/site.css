@@ -85,12 +85,8 @@ body {
     max-width: 400px;
 }
 
-@media (max-width: 767px)
-{
-    .exchange-form { display: none; }
-}
-
 @media (max-width: 767px) {
+    .exchange-form { display: none; }
     .desktop {
         display: none;
     }
