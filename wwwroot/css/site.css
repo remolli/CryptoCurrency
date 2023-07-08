@@ -85,18 +85,22 @@ body {
     max-width: 400px;
 }
 
-@media (max-width: 767px) {
-    .exchange-form { display: none; }
+@media (max-width: 575px) {
+    .exchange-form {
+        display: none;
+    }
+
     .desktop {
         display: none;
     }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 576px) {
     .mobile {
         display: none;
     }
 }
+
 .profit {
     color: rgb(20, 200, 20);
 }
