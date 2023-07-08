@@ -10,21 +10,20 @@
     <div class="text-center">
         <p class="display-4 my-5">This is just an <i class="text-decoration-underline" style="letter-spacing:2px">CryptoCurrency</i> exhibition</p>
 
+        <p class="fs-3 m-3 p-3 text-secondary" style="letter-spacing:3px"><i>Interative Text</i></p>
+
         <div class="row row-cols-auto">
             @for (int i = 0; i < text.Length; i++)
             {
                 @if (text[i] == ' ')
                 {
-                    <i class="col fs-3 fst-italic" style="padding:1px 3px">@text[i]</i>
+                    <i class="col  fst-italic about-space">@text[i]</i>
                 }
                 else
                 {
-                    <i class="col fs-3 fst-italic" style="padding:1px 1px">@text[i]</i>
+                    <i class="col  fst-italic about-letter about-text">@text[i]</i>
                 }
         }
         </div>
-
-        <p class="fs-3">@text</p>
-        
     </div>
 }
