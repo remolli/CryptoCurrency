@@ -4,26 +4,18 @@
 
 @{
     string text = @"Our webpage is a reliable source to track the leading cryptocurrencies and their daily price variations and trading volumes. With real-time updates, you will have access to the latest information on the crypto market, you to make informed decisions and stay up - to - date with the latest trends. Stay informed and take advantage of all the features offered by our webpage to explore the fascinating world of cryptocurrencies.";
-
     var words = text.Split(' ');
 
     <div class="text-center">
-        <p class="display-4 my-5">This is just an <i class="text-decoration-underline" style="letter-spacing:2px">CryptoCurrency</i> exhibition</p>
+        <p class="display-5 my-5">This is just an <i class="text-decoration-underline cryptocurrency border-0" style="">CryptoCurrency</i> exhibition</p>
 
-        <p class="fs-3 m-3 p-3 text-secondary" style="letter-spacing:3px"><i>Interative Text</i></p>
+        <p class="fs-4 m-3 p-3 text-secondary" style="letter-spacing:3px"><i class="border-start border-end border-secondary px-4">Interative Text</i></p>
 
-        <div class="row row-cols-auto">
-            @for (int i = 0; i < text.Length; i++)
+        <div class="row row-cols-auto mx-3">
+            @for (int i = 0; i < words.Length; i++)
             {
-                @if (text[i] == ' ')
-                {
-                    <i class="col  fst-italic about-space">@text[i]</i>
-                }
-                else
-                {
-                    <i class="col  fst-italic about-letter about-text">@text[i]</i>
-                }
-        }
+                <i class="col fst-italic about-letter about-text">@words[i]</i>
+            }
         </div>
     </div>
 }
