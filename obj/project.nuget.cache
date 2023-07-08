@@ -1,12 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "38tQlql4ydAFArrEAOTtEHeIYHuDlmdhbgjJOIYLfpkFbBaR9YKxyR1cyWulYVjgME1CbNtCA6gmoFgX1dZeuw==",
+  "dgSpecHash": "ncvcaowD2SJCFpDAepefXt2BQqX390Og2fe5O7b+UHonQN4ixaFYwVMMvPQJ6FZNKPLN2CgECJSXAUO77yRN/w==",
   "success": true,
-  "projectFilePath": "C:\\Users\\lia\\Desktop\\GITHUB\\CryptoCurrency\\CryptoCurrency.csproj",
+  "projectFilePath": "C:\\Users\\Win10\\Desktop\\GITHUB\\CryptoCurrency\\CryptoCurrency.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\lia\\.nuget\\packages\\restsharp\\110.2.0\\restsharp.110.2.0.nupkg.sha512",
-    "C:\\Users\\lia\\.nuget\\packages\\system.text.encodings.web\\7.0.0\\system.text.encodings.web.7.0.0.nupkg.sha512",
-    "C:\\Users\\lia\\.nuget\\packages\\system.text.json\\7.0.2\\system.text.json.7.0.2.nupkg.sha512"
+    "C:\\Users\\Win10\\.nuget\\packages\\restsharp\\110.2.0\\restsharp.110.2.0.nupkg.sha512",
+    "C:\\Users\\Win10\\.nuget\\packages\\system.text.encodings.web\\7.0.0\\system.text.encodings.web.7.0.0.nupkg.sha512",
+    "C:\\Users\\Win10\\.nuget\\packages\\system.text.json\\7.0.2\\system.text.json.7.0.2.nupkg.sha512"
   ],
   "logs": []
 }
