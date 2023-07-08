@@ -5,9 +5,15 @@
 }
 
 <body class="bg-black text-white">
-    <div class="text-center m-5 cryptocurrency">
+
+    <div class="text-center m-5 cryptocurrency desktop">
         <h1 class="display-2 my-3">CrytoCurrency</h1>
-        <p class="fs-5"><i>Just assets exhibition.</i></p>
+        <p class="fs-5"><i>Just assets exhibition</i></p>
+    </div>
+
+    <div class="text-center py-5 mobile">
+        <h1 class="display-1 my-3" style="letter-spacing:2px"><i>CrytoCurrency</i></h1>
+        <p class="fs-5" style="letter-spacing:1px"><i>Just assets exhibition</i></p>
     </div>
 
     <div class="container text-center text-white my-5">
@@ -26,22 +32,25 @@
             {
                 if (item.rank <= 15)
                 {
-                    <div class="row margin-hover border-bottom border-white py-2 d-flex justify-content-center align-items-center bg-dark bg-opacity-25" style="border-radius:5px">
+                    <div class="row row-cols-sm-4 row-cols-3 margin-hover border-bottom border-white py-2 d-flex justify-content-center align-items-center bg-dark bg-opacity-25" style="border-radius:5px">
                         <a class="col fs-5 btn btn-outline-primary bg-primary bg-opacity-10 px-0" asp-controller="Home" asp-action="Symbol" asp-route-id="@item.id" style="border-top:0px;border-right:0px;border-left:0px">@item.name</a>
-                        <p class="col fs-5 money fst-italic">$@Math.Round(item.priceUsd, 5)</p>
+                        <p class="col fs-5 money fst-italic desktop">$@Math.Round(item.priceUsd, 5)</p>
+                        <p class="col fs-5 money fst-italic mobile">$@Math.Round(item.priceUsd, 2)</p>
                         <p class="col fs-5 money fst-italic desktop">$@Math.Round(item.volumeUsd24Hr, 5)</p>
                         @if (item.changePercent24Hr < 0)
                         {
-                            <p class="col fs-5 text-danger fst-italic">$@Math.Round(item.changePercent24Hr, 5)</p>
-
+                            <p class="col fs-5 text-danger fst-italic desktop">$@Math.Round(item.changePercent24Hr, 5)</p>
+                            <p class="col fs-5 text-danger fst-italic mobile">$@Math.Round(item.changePercent24Hr, 3)</p>
                         }
                         else if (item.changePercent24Hr > 0)
                         {
-                            <p class="col fs-5 profit fst-italic">$@Math.Round(item.changePercent24Hr, 5)</p>
+                            <p class="col fs-5 profit fst-italic desktop">$@Math.Round(item.changePercent24Hr, 5)</p>
+                            <p class="col fs-5 profit fst-italic mobile">$@Math.Round(item.changePercent24Hr, 3)</p>
                         }
                         else
                         {
-                            <p class="col fs-5 text-white fst-italic">$@Math.Round(item.changePercent24Hr, 5)</p>
+                            <p class="col fs-5 text-white fst-italic desktop">$@Math.Round(item.changePercent24Hr, 5)</p>
+                            <p class="col fs-5 text-white fst-italic mobile">$@Math.Round(item.changePercent24Hr, 3)</p>
                         }
                     </div>
                 }
